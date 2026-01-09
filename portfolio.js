@@ -1,83 +1,112 @@
-const navItems = document.querySelectorAll(".nav-list li");
-const sections = document.querySelectorAll(".section");
-const tabLists = document.querySelectorAll(".tab-list");
-const tabBoxes = document.querySelectorAll(".resume-box, .portfolio-box");
+/* ================= MOBILE MENU ================= */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const navItems = document.querySelectorAll(".nav-links a");
 
-// Navigation functionality
-navItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    navItems.forEach((nav) => nav.classList.remove("active"));
-    sections.forEach((section) => section.classList.remove("active"));
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
 
-    item.classList.add("active");
-    sections[index].classList.add("active");
+navItems.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
   });
 });
 
-// Tab functionality for resume section
-document.querySelectorAll(".resume-list").forEach((tab, index) => {
-  tab.addEventListener("click", () => {
-    document
-      .querySelectorAll(".resume-list")
-      .forEach((t) => t.classList.remove("active"));
-    document
-      .querySelectorAll(".resume-box")
-      .forEach((box) => box.classList.remove("active"));
+/* ================= ACTIVE NAV ON SCROLL ================= */
+const sections = document.querySelectorAll("section");
 
-    tab.classList.add("active");
-    document.querySelectorAll(".resume-box")[index].classList.add("active");
-  });
-});
+window.addEventListener("scroll", () => {
+  let currentSection = "";
 
-// Tab functionality for portfolio section
-document.querySelectorAll(".portfolio-list").forEach((tab, index) => {
-  tab.addEventListener("click", () => {
-    document
-      .querySelectorAll(".portfolio-list")
-      .forEach((t) => t.classList.remove("active"));
-    document
-      .querySelectorAll(".portfolio-box")
-      .forEach((box) => box.classList.remove("active"));
-
-    tab.classList.add("active");
-    document.querySelectorAll(".portfolio-box")[index].classList.add("active");
-  });
-});
-
-// Smooth scrolling and animations
-window.addEventListener("load", () => {
-  document.body.style.opacity = "1";
-});
-
-// Add hover effects to portfolio items
-document.querySelectorAll(".portfolio-item").forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    item.style.transform = "translateY(-10px) scale(1.02)";
-  });
-
-  item.addEventListener("mouseleave", () => {
-    item.style.transform = "translateY(0) scale(1)";
-  });
-});
-
-// Add typing effect to the main heading
-function typeWriter(element, text, speed = 100) {
-  let i = 0;
-  element.innerHTML = "";
-  function typing() {
-    if (i < text.length) {
-      element.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typing, speed);
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.scrollY >= sectionTop) {
+      currentSection = section.getAttribute("id");
     }
+  });
+
+  navItems.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+});
+
+/* ================= TYPING EFFECT (HERO) ================= */
+const text = "MERN Stack Developer";
+const typeTarget = document.getElementById("typeText");
+let index = 0;
+
+function typeWriter() {
+  if (index < text.length) {
+    typeTarget.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 120);
   }
-  typing();
 }
 
-// Initialize typing effect when page loads
-window.addEventListener("load", () => {
-  const nameElement = document.querySelector(".home-info h1");
-  if (nameElement) {
-    typeWriter(nameElement, "Anish Kumar", 150);
-  }
+window.addEventListener("load", typeWriter);
+
+/* ================= REVEAL ANIMATIONS ================= */
+const revealElements = document.querySelectorAll(
+  ".skill-card, .experience-card, .project-card, .education-card"
+);
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealElements.forEach((el) => {
+  el.style.opacity = "0";
+  el.style.transform = "translateY(30px)";
+  el.style.transition = "all 0.6s ease";
+  revealObserver.observe(el);
+});
+
+/* ================= CONTACT FORM FEEDBACK ================= */
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const button = contactForm.querySelector("button");
+  button.textContent = "Sending...";
+  button.disabled = true;
+
+  setTimeout(() => {
+    alert("Message sent successfully.");
+    contactForm.reset();
+    button.textContent = "Send Message";
+    button.disabled = false;
+  }, 1500);
+});
+
+/* ================= SCROLL PROGRESS BAR ================= */
+const progressBar = document.createElement("div");
+progressBar.style.cssText = `
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+  z-index: 2000;
+`;
+document.body.appendChild(progressBar);
+
+window.addEventListener("scroll", () => {
+  const scrollHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (window.scrollY / scrollHeight) * 100;
+  progressBar.style.width = progress + "%";
 });

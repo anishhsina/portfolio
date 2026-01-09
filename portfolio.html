@@ -1,360 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Portfolio - Anish Kumar</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anish Kumar | MERN Stack Developer</title>
+  <link rel="stylesheet" href="portfolio.css" />
+</head>
+<body>
 
-    <!-- favicon icon-->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<!-- ================= HEADER ================= -->
+<header id="header">
+  <nav class="container nav">
+    <div class="brand">
+      <span class="name">Anish Kumar</span>
+      <span class="role">MERN Stack Developer</span>
+    </div>
 
-    <!--Boxicons Link-->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="portfolio.css" />
-  </head>
-  <body>
-    <!--navbar-->
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="active">
-          <i class="bx bx-home-alt"></i>
-          <span class="tooltip">Home</span>
-        </li>
-        <li>
-          <i class="bx bx-user"></i>
-          <span class="tooltip">About</span>
-        </li>
-        <li>
-          <i class="bx bx-detail"></i>
-          <span class="tooltip">Resume</span>
-        </li>
-        <li>
-          <i class="bx bx-briefcase"></i>
-          <span class="tooltip">Portfolio</span>
-        </li>
-        <li>
-          <i class="bx bx-envelope"></i>
-          <span class="tooltip">Contact</span>
-        </li>
-      </ul>
-    </nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-    <div class="container">
-      <div class="box">
-        <!--home section-->
-        <section class="section home active">
-          <div class="home-info">
-            <h3>Hello I'm</h3>
-            <h1>Anish Kumar</h1>
-            <h3>MERN Stack Developer</h3>
-            <p class="desc">
-              I'm a passionate MERN Stack Developer 💻 with a Bachelor of Technology in Computer Science and Engineering from Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal (CGPA: 7.97) 🎓. I specialize in building scalable web applications 🚀 using modern technologies like React ⚛️, Express.js ⚡, JavaScript 🖥️, Node.js 🌐 and MongoDB 🗄️. <br><br>
-              I am a highly motivated and results-oriented developer with a passion for creating user-centric web applications. Ever since I first started coding, I've been fascinated by the potential of technology to solve problems and create meaningful experiences. I am confident I can quickly become a valuable asset to your team by applying my problem-solving skills, collaborative spirit, and commitment to excellence 📈.
-            </p>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
 
-            <div class="btn-sci">
-              <a href="#" class="btn">Download CV</a>
-              <div class="sci">
-                <a href="https://github.com/anishkumar" target="_blank" rel="noopener noreferrer">
-                  <i class="bx bxl-github"></i>
-                  <span class="tooltip">Github</span>
-                </a>
-                <a href="https://www.linkedin.com/in/anishkumar" target="_blank" rel="noopener noreferrer">
-                  <i class="bx bxl-linkedin"></i>
-                  <span class="tooltip">Linkedin</span>
-                </a>
-                <a href="https://www.instagram.com/anishkumar" target="_blank" rel="noopener noreferrer">
-                  <i class="bx bxl-instagram"></i>
-                  <span class="tooltip">Instagram</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="img-wrapper">
-            <div class="img-box home-img">
-              <img src="asset/profile1.jpg" alt="Anish Kumar" />
-            </div>
-          </div>
-        </section>
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Anish Kumar</h1>
+    <h2 class="hero-subtitle" id="typeText"></h2>
 
-        <!--about section-->
-        <section class="section about">
-          <div class="img-wrapper">
-            <div class="img-box about-img">
-              <img src="asset/profile2.jpg" alt="Anish Kumar" />
-            </div>
-          </div>
+    <p class="hero-summary">
+      MERN Stack Developer with a B.Tech in Computer Science & Engineering,
+      experienced in building scalable, high-performance, and user-centric
+      web applications using modern frontend and backend technologies.
+    </p>
 
-          <div class="about-info">
-            <h2 class="title">About Me</h2>
-            <h3>MERN Stack Developer</h3>
-            <p class="desc">
-              💻 With expertise in MERN Stack Development, I have developed and maintained web applications using MongoDB, Express.js, React.js, and Node.js. I have hands-on experience in building dynamic and responsive user interfaces with React, managing state and side effects using React hooks and Redux. <br><br>
+    <div class="hero-actions">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+  </div>
+</section>
 
-              I have successfully developed a full-stack e-commerce website using the MERN stack, implementing user authentication and authorization using JWT (JSON Web Tokens). I designed and integrated RESTful APIs for product management, cart, and order functionality. I have experience with payment gateway integration (Stripe, Razorpay) for secure transactions and have optimized applications for performance and scalability. <br><br>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
 
-              My technical skills include JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB, HTML, CSS, Bootstrap, Tailwind CSS, C, C++, Python, Git, and GitHub. I am passionate about building efficient, user-centric applications while continuously enhancing my technical expertise 🚀.
-            </p>
-          </div>
-        </section>
+    <div class="about-grid">
+      <div class="about-avatar">
+  <img 
+    src="asset/avatar.png" 
+    alt="Developer illustration avatar"
+  />
+</div>
 
-        <!--resume section-->
-        <section class="section resume">
-          <h2 class="title">Resume</h2>
-          <div class="tab-box">
-            <div class="tab-list resume-list active">
-              <h3>Experience</h3>
-            </div>
-            <div class="tab-list resume-list">
-              <h3>Skills</h3>
-            </div>
-            <div class="tab-list resume-list">
-              <h3>Education</h3>
-            </div>
-          </div>
-          <div class="tab-wrapper">
-            <div class="tab-grid resume-box experience active">
-              <div class="tab-item resume-item">
-                <h4>Current Role</h4>
-                <h4>MERN Stack Developer</h4>
-                <h4>Freelancer / Project Work</h4>
-                <p>
-                  • Developed and maintained web applications using MERN Stack (MongoDB, Express.js, React.js, Node.js). <br />
-                  • Implemented user authentication and authorization using JWT (JSON Web Tokens). <br />
-                  • Designed and integrated RESTful API for product management, cart, and order functionality. <br />
-                  • Built dynamic and responsive user interfaces with React. <br />
-                  • Managed state and side effects using React hooks and Redux. <br />
-                  • Optimized applications for performance and scalability, ensuring seamless user experience. <br />
-                  • Integrated payment gateways (Stripe, Razorpay) for secure transactions. <br />
-                  • Configured MongoDB for efficient data storage and retrieval, implementing aggregation pipelines and indexes. <br />
-                  • Deployed applications on cloud platforms like Vercel.
-                </p>
-              </div>
-            </div>
 
-            <div class="tab-grid resume-box skills">
-              <div class="tab-item resume-item">
-                <i class="bx bxl-javascript"></i>
-                <p>JavaScript</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-react"></i>
-                <p>React.js</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-nodejs"></i>
-                <p>Node.js</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bx-world"></i>
-                <p>Express.js</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-mongodb"></i>
-                <p>MongoDB</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-html5"></i>
-                <p>HTML 5</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-css3"></i>
-                <p>CSS 3</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-bootstrap"></i>
-                <p>Bootstrap</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-tailwind-css"></i>
-                <p>Tailwind CSS</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bx-code-alt"></i>
-                <p>C / C++</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-python"></i>
-                <p>Python</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-git"></i>
-                <p>Git</p>
-              </div>
-              <div class="tab-item resume-item">
-                <i class="bx bxl-github"></i>
-                <p>Github</p>
-              </div>
-            </div>
+      <div class="about-text">
+        <p>
+          I am a MERN Stack Developer specializing in building clean,
+          scalable, and maintainable web applications. I enjoy working
+          across the full stack — from crafting pixel-perfect UIs to
+          designing efficient backend APIs.
+        </p>
 
-            <div class="tab-grid resume-box education">
-              <div class="tab-item resume-item">
-                <h4>Jun 2020 - May 2024</h4>
-                <h4>Bachelor of Technology (CSE)</h4>
-                <h4>Rajiv Gandhi Proudyogiki Vishwavidyalaya</h4>
-                <p>
-                  Completed Bachelor of Technology in Computer Science and Engineering from Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal, Madhya Pradesh. <br />
-                  <br />
-                  CGPA - 7.97
-                </p>
-              </div>
-              <div class="tab-item resume-item">
-                <h4>2018 - 2019</h4>
-                <h4>Higher Secondary (12th)</h4>
-                <h4>SR. SEC. SCHOOL, JALALPUR BAZAR, SARAN</h4>
-                <p>
-                  Completed Higher Secondary education from SR. SEC. SCHOOL, JALALPUR BAZAR, SARAN. <br />
-                  <br />
-                  Score - 81.6%
-                </p>
-              </div>
-              <div class="tab-item resume-item">
-                <h4>2016 - 2017</h4>
-                <h4>Secondary (10th)</h4>
-                <h4>HIGH SCHOOL, JALALPUR BAZAR, SARAN</h4>
-                <p>
-                  Completed Secondary education from HIGH SCHOOL, JALALPUR BAZAR, SARAN. <br />
-                  <br />
-                  Score - 73.4%
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--portfolio section-->
-        <section class="section portfolio">
-          <h2 class="title">Portfolio</h2>
-          <div class="tab-box">
-            <div class="tab-list portfolio-list active">
-              <h3>My Work</h3>
-            </div>
-          </div>
-
-          <div class="tab-wrapper">
-            <div class="tab-grid portfolio-box work active">
-              <div class="tab-item portfolio-item">
-                <div class="work-img">
-                  <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop" alt="E-commerce Project" />
-                </div>
-                <div class="work-info">
-                  <h4>Full Stack E-commerce Project</h4>
-                  <p>Developed a full-stack e-commerce website using the MERN stack with user authentication, JWT tokens, RESTful API, payment gateways (Stripe, Razorpay), and MongoDB optimization. 🛍️</p>
-                  <div class="tech-used">
-                    <p>MongoDB, Express.js, React.js, Node.js, JWT, Stripe, Razorpay</p>
-                  </div>
-                  <div class="portfolio-icon work-icon">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bx-arrow-back"></i>
-                      <span class="tooltip">Preview</span>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bxl-github"></i>
-                      <span class="tooltip">Github Repo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-item portfolio-item">
-                <div class="work-img">
-                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Web Application" />
-                </div>
-                <div class="work-info">
-                  <h4>MERN Stack Web Application</h4>
-                  <p>Built dynamic and responsive web applications with React, implemented state management using Redux, and optimized for performance and scalability. 🚀</p>
-                  <div class="tech-used">
-                    <p>React.js, Redux, Node.js, Express.js, MongoDB</p>
-                  </div>
-                  <div class="portfolio-icon work-icon">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bx-arrow-back"></i>
-                      <span class="tooltip">Preview</span>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bxl-github"></i>
-                      <span class="tooltip">Github Repo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-item portfolio-item">
-                <div class="work-img">
-                  <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop" alt="API Development" />
-                </div>
-                <div class="work-info">
-                  <h4>RESTful API Development</h4>
-                  <p>Designed and integrated RESTful APIs for product management, cart functionality, and order processing with efficient MongoDB queries. 🔧</p>
-                  <div class="tech-used">
-                    <p>Node.js, Express.js, MongoDB, REST API</p>
-                  </div>
-                  <div class="portfolio-icon work-icon">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bx-arrow-back"></i>
-                      <span class="tooltip">Preview</span>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bxl-github"></i>
-                      <span class="tooltip">Github Repo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-item portfolio-item">
-                <div class="work-img">
-                  <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop" alt="Payment Integration" />
-                </div>
-                <div class="work-info">
-                  <h4>Payment Gateway Integration</h4>
-                  <p>Integrated secure payment gateways including Stripe and Razorpay for seamless transaction processing in e-commerce applications. 💳</p>
-                  <div class="tech-used">
-                    <p>Stripe API, Razorpay, Node.js, Express.js</p>
-                  </div>
-                  <div class="portfolio-icon work-icon">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bx-arrow-back"></i>
-                      <span class="tooltip">Preview</span>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      <i class="bx bxl-github"></i>
-                      <span class="tooltip">Github Repo</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--contact section-->
-        <section class="section contact">
-          <h2 class="title">Contact</h2>
-          <div class="contact-wrapper">
-            <div class="contact-form">
-              <h3>Let's work Together</h3>
-              <div class="field-box">
-                <input type="text" placeholder="Enter Your Name" required/>
-                <input type="email" placeholder="Enter Your Email" required/>
-                <input type="text" placeholder="Enter your mobile no." required/>
-                <input type="text" placeholder="Email Subject" required/>
-                <textarea placeholder="Your Message"></textarea>
-              </div>
-              <div class="contact-btn">
-                <h2>Have a<span> Question? </span></h2>
-                <p>📧 Email: anishkumargsa@gmail.com</p>
-                <p>📱 Phone: +91-7545995534</p>
-                <p>📍 Location: Saran, Bihar</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <p>
+          My core strengths include React.js, Redux, React Query, Tailwind CSS,
+          Node.js, Express.js, MongoDB, and RESTful API development. I am
+          comfortable working in Agile teams and following industry best
+          practices.
+        </p>
       </div>
     </div>
-  </body>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>Languages</h3>
+        <ul>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <ul>
+          <li>React.js</li>
+          <li>Redux</li>
+          <li>React Query</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <ul>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>RESTful APIs</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Databases & Tools</h3>
+        <ul>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>Git & GitHub</li>
+          <li>Postman</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-card">
+      <h3>CETPA Infotech Pvt. Ltd., Noida</h3>
+      <span class="experience-meta">
+        Trainee & Intern – MERN Stack Developer | Feb 2025 – Present
+      </span>
+
+      <ul>
+        <li>
+          Developed responsive user interfaces using React.js, Redux,
+          React Query, and Tailwind CSS.
+        </li>
+        <li>
+          Integrated REST APIs for efficient data handling and optimized
+          performance using improved caching strategies.
+        </li>
+        <li>
+          Built reusable UI components and contributed to backend
+          development using Node.js, Express.js, and MongoDB.
+        </li>
+        <li>
+          Collaborated in Agile sprints using Git and GitHub for version control.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-card">
+      <h3>MERN Cloth Selling Website</h3>
+      <span class="project-links">
+        <a href="https://forever-frontend-jet.vercel.app/" target="_blank">Live</a>
+        <a href="https://github.com/anishhsina/forever-full-stack/tree/main" target="_blank">GitHub</a>
+      </span>
+
+      <p class="project-tech">
+        MongoDB, Express.js, React.js, Node.js, Tailwind CSS,
+        Axios, JWT, Cloudinary, Stripe, Razorpay
+      </p>
+
+      <ul>
+        <li>
+          Developed a full-stack e-commerce platform with secure
+          authentication and payment integration.
+        </li>
+        <li>
+          Implemented RESTful APIs for product management,
+          user authentication, and order handling.
+        </li>
+        <li>
+          Integrated Stripe and Razorpay for online payments
+          and Cloudinary for image storage.
+        </li>
+        <li>
+          Built a mobile-first, responsive UI using React,
+          Tailwind CSS, and React Router.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+
+    <div class="education-card">
+      <h3>Rajiv Gandhi Proudyogiki Vishwavidyalaya</h3>
+      <span class="education-meta">
+        Bachelor of Technology (B.Tech) – Computer Science & Engineering
+      </span>
+      <span class="education-year">
+        July 2020 – June 2024
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact-details">
+      <p>Phone: +91 7545995534</p>
+      <p>Email: anishkumargsa@gmail.com</p>
+    </div>
+
+    <form id="contactForm" class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© 2026 Anish Kumar. All rights reserved.</p>
+</footer>
+
+<script src="portfolio.js"></script>
+</body>
 </html>
